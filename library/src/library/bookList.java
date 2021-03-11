@@ -10,6 +10,7 @@ public class bookList {
 	}
 	
 	public void addBook(book bk) {
+		/*添加书到书单中*/
 		if(this.Booklist.containsKey(bk.m_name)) {
 			this.Booklist.put(bk.m_name, this.Booklist.get(bk.m_name)+bk.m_num);
 		}

@@ -12,6 +12,7 @@ public class person {
 	}
 	
 	public void getbook(bookList bl) {
+		/*借书，从书单中获取信息*/
 		for(Map.Entry<String, Integer> entry:bl.Booklist.entrySet()) {
 			String name=entry.getKey();
 			if(this.record.containsKey(name)) {
@@ -25,6 +26,7 @@ public class person {
 	}
 	
 	public void backbook(bookList bl) {
+		/*还书,从书单中获取信息*/
 		for(Map.Entry<String, Integer> entry:bl.Booklist.entrySet()) {
 			String name=entry.getKey();
 			this.record.put(name, this.record.get(name)-entry.getValue());
@@ -34,6 +36,7 @@ public class person {
 		}
 	}
 	public void lookUp() {
+		/*查看自身借书情况*/
 		for(Map.Entry<String, Integer> entry:this.record.entrySet()) {
 			System.out.println("书名:"+entry.getKey()+"  数量:"+entry.getValue());
 		}

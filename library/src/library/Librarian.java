@@ -11,10 +11,12 @@ public class Librarian {
 	}
 	
 	public void upDate(person p) {
+		/*更新一个人的借书情况*/
 		this.recordPerson.put(p.m_name, p);
 	}
 	
 	public void lookUpPerson(String name) {
+		/*管理员查看某人的借书情况*/
 		System.out.println("用户名字:"+name);
 		this.recordPerson.get(name).lookUp();		
 	}
